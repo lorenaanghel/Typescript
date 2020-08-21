@@ -12,27 +12,27 @@ app.get("/sum/:number1/:number2", (request, response) => {
     let number1 = parseInt(request.params.number1);
     let number2 = parseInt(request.params.number2);
     let result = number1 + number2;
-    response.send(number1 + " + " + number2 + " = " + result);
+    response.send(number1 + "+" + number2 + " = " + result);
 });
-app.get("/sub/:number1/:number2", (request, response) => {
+app.get("/substraction/:number1/:number2", (request, response) => {
     let number1 = parseInt(request.params.number1);
     let number2 = parseInt(request.params.number2);
     let result = number1 - number2;
-    response.send(number1 + " - " + number2 + " = " + result);
+    response.send(number1 + "-" + number2 + " = " + result);
 });
-app.get("/mul/:number1/:number2", (request, response) => {
+app.get("/multiply/:number1/:number2", (request, response) => {
     let number1 = parseInt(request.params.number1);
     let number2 = parseInt(request.params.number2);
     let result = number1 * number2;
-    response.send(number1 + " * " + number2 + " = " + result);
+    response.send(number1 + "*" + number2 + " = " + result);
 });
 app.get("/div/:number1/:number2", (request, response) => {
     let number1 = parseInt(request.params.number1);
     let number2 = parseInt(request.params.number2);
     let result = number1 / number2;
-    response.send(number1 + " / " + number2 + " = " + result);
+    response.send(number1 + "/" + number2 + " = " + result);
 });
-app.post("/exponential", (request, response) => {
+app.post("/power", (request, response) => {
     let numbers = {
         base: request.body.base ? request.body.base : "N/A",
         exp: request.body.exp ? request.body.exp : "N/A",
